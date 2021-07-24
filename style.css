@@ -1,178 +1,83 @@
-/*Global Reset*/
 * {
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: sans-serif;
-  border-top: 10px solid #1098ab;
-}
-
-.container {
-  width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.main-header {
-  background-color: #f7f7f7;
-  padding: 20px 40px;
-  margin-bottom: 60px;
-  height: 80px;
-}
-
-nav {
-  font-size: 18px;
 }
 
 article {
-  margin-bottom: 60px;
+  border: 5px solid #000;
+  line-height: 1.4;
 }
 
-aside {
-  background-color: #f7f7f7;
-  border-top: 5px solid #1098ab;
-  border-bottom: 5px solid #1098ab;
-  padding: 50px 0;
-  width: 500px;
-  height: auto;
-}
-
-.post-header {
-  margin-bottom: 40px;
-}
-
-li,
-p {
-  color: #444;
-}
-h1 {
-  font-size: 26px;
-  text-transform: uppercase;
-  font-style: italic;
-  color: #1098ab;
-}
-
-h2 {
-  font-size: 40px;
-  margin-bottom: 30px;
-  color: #1098ab;
-}
-
-h3 {
-  font-size: 30px;
-  margin-bottom: 20px;
-  margin-top: 40px;
-  color: #1098ab;
-}
-
-h4 {
-  font-size: 20px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-p {
-  font-size: 22px;
-  line-height: 1.5;
+li {
   margin-bottom: 15px;
 }
-
-ul,
-ol {
-  margin-left: 50px;
-  margin-bottom: 20px;
+.container {
+  width: 825px;
+  margin: 30px auto;
 }
-li {
-  font-size: 20px;
+.product-title,
+.product-details,
+.button,
+.product-title,
+.shipping {
+  text-transform: uppercase;
+}
+
+.product-title {
+  background-color: #f7f7f7;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.product-img {
   margin-bottom: 10px;
 }
 
-li:last-child {
-  margin-bottom: 0px;
-}
-/* We cannot use an ids more than once. That functionality is only available with classes.*/
-#copyright {
-  font-size: 16px;
+.price {
+  font-size: 24px;
+  margin-bottom: 5px;
 }
 
-/*We utilize ids to prevent specific, long css calls i.e.(header div p strong)*/
-#author {
-  font-style: italic;
-  font-size: 18px;
-}
-
-/* In modern development. We typically only use classes. No ids are typically used.  */
-
-.related-author {
-  font-size: 18px;
+.shipping {
+  color: rgba(60, 58, 58, 0.584);
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.related-list {
-  list-style: none;
+.product-pitch {
+  margin-bottom: 15px;
 }
-
-/* Pseudo classes */
-
-li:first-child {
-  font-weight: bold;
+.more-product-info:link,
+.more-product-info:visited {
+  color: #000;
 }
-
-li:last-child {
-  font-style: italic;
-}
-
-/* Misconception: This will not work */
-article p:first-child {
-  color: red;
-}
-
-/* Styling Links */
-/* a element with href */
-a:link {
-  color: #1098ab;
+.more-product-info:hover,
+.more-product-info:active {
   text-decoration: none;
 }
 
-a:visited {
-  color: #1098ab;
+.product-details {
+  margin-bottom: 15px;
+}
+.product-details-li {
+  list-style-type: square;
+  padding-left: 50px;
 }
 
-a:hover {
-  color: orangered;
-  font-weight: bold;
-  text-decoration: underline orangered;
-}
-
-a:active {
-  background-color: rgb(0, 0, 0);
-  font-style: italic;
-}
-/* LVHA */
-
-.post-img {
+.button {
+  color: #fff;
+  font-size: 22px;
+  background-color: #000;
   width: 100%;
-  height: auto;
-}
-/* Resolving conflicts */
-/* IDs take precedence */
-/* #copyright {
-  color: red;
 }
 
-.copyright {
-  color: blue;
+.button:hover {
+  color: #000;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
 }
-
-.text {
-  color: yellow;
-}
-
-footer p {
-  color: green;
-} */
-
-/* Use Simple Selectors */
-
-/* Inheritance */
