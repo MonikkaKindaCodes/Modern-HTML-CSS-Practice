@@ -1,235 +1,138 @@
-/*Global Reset*/
 * {
   margin: 0;
   padding: 0;
 }
 
-/*Page Sections*/
-
 body {
   font-family: sans-serif;
-  border-top: 10px solid #1098ab;
-  position: relative;
-}
-
-.container {
-  width: 800px;
-  margin: 0 auto;
-}
-
-.main-header {
-  background-color: #f7f7f7;
-  padding: 20px 40px;
-  margin-bottom: 60px;
-  height: 80px;
-}
-
-nav {
-  font-size: 18px;
-  text-align: center;
-}
-
-nav a:link {
-  margin-right: 30px;
-  margin-top: 10px;
-  display: inline-block;
-  /* background-color: orangered;
-  margin: 20px;
-  padding: 20px;
-  display: block; */
-}
-
-nav a:link:last-child {
-  margin-right: 0;
 }
 
 article {
-  margin-bottom: 60px;
-}
-
-aside {
-  background-color: #f7f7f7;
-  border-top: 5px solid #1098ab;
-  border-bottom: 5px solid #1098ab;
-  padding: 50px 0;
-  width: 500px;
-  height: auto;
-}
-
-.post-header {
-  margin-bottom: 40px;
-}
-
-li,
-p {
-  color: #444;
-}
-
-h1 {
-  font-size: 26px;
-  text-transform: uppercase;
-  font-style: italic;
-  color: #1098ab;
-}
-
-h2 {
-  font-size: 40px;
-  margin-bottom: 30px;
-  color: #1098ab;
+  border: 5px solid #000;
+  line-height: 1.4;
   position: relative;
 }
 
-h3 {
-  font-size: 30px;
-  margin-bottom: 20px;
-  margin-top: 40px;
-  color: #1098ab;
-}
-
-h4 {
-  font-size: 20px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-p {
-  font-size: 22px;
-  line-height: 1.5;
+li {
   margin-bottom: 15px;
 }
 
-ul,
-ol {
-  margin-left: 50px;
-  margin-bottom: 20px;
+.container {
+  width: 825px;
+  margin: 50px auto;
 }
 
-li {
-  font-size: 20px;
+.product-title,
+.product-details,
+.button,
+.product-title,
+.shipping {
+  text-transform: uppercase;
+}
+
+.product-title {
+  background-color: #f7f7f7;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.product-img {
   margin-bottom: 10px;
 }
 
-li:last-child {
-  margin-bottom: 0px;
-}
-/* We cannot use an ids more than once. That functionality is only available with classes.*/
-#copyright {
-  font-size: 16px;
+.price {
+  font-size: 24px;
+  margin-bottom: 5px;
 }
 
-/*We utilize ids to prevent specific, long css calls i.e.(header div p strong)*/
-#author {
-  font-style: italic;
-  font-size: 18px;
-}
-
-/* In modern development. We typically only use classes. No ids are typically used.  */
-
-.related-author {
-  font-size: 18px;
+.shipping {
+  color: rgba(60, 58, 58, 0.584);
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.related-list {
-  list-style: none;
+.product-pitch {
+  margin-bottom: 15px;
 }
 
-/* Pseudo classes */
-
-li:first-child {
-  font-weight: bold;
+.more-product-info:link,
+.more-product-info:visited {
+  color: #000;
 }
 
-li:last-child {
-  font-style: italic;
-}
-
-/* Misconception: This will not work */
-article p:first-child {
-  color: red;
-}
-
-/* Styling Links */
-/* a element with href */
-a:link {
-  color: #1098ab;
+.more-product-info:hover,
+.more-product-info:active {
   text-decoration: none;
 }
 
-a:visited {
-  color: #1098ab;
+.product-detals {
+  margin: 25px 0;
 }
 
-a:hover {
-  color: orangered;
-  font-weight: bold;
-  text-decoration: underline orangered;
+.product-details-li {
+  list-style-type: square;
+  padding-left: 50px;
 }
 
-a:active {
-  background-color: rgb(0, 0, 0);
-  font-style: italic;
-}
-/* LVHA */
-
-.post-img {
-  width: 100%;
-  height: auto;
-}
-
-.like-btn {
+.button {
+  color: #fff;
   font-size: 22px;
-  padding: 20px;
-  cursor: pointer;
-  /* top: 50px;
-  right: 50px; */
-  position: absolute;
-  bottom: 50px;
-  right: 50px;
+  background-color: #000;
+  padding: 15px;
+  width: 100%;
 }
 
-/*Pseudo Elements are written with 2 colons :: */
-
-h1::first-letter {
-  font-style: normal;
-  margin-right: 5px;
-}
-
-/*Adajacent Sobling Selector*/
-/* h3 + p::first-line {
-  color: red;
-} */
-
-h2::after {
-  content: "TOP";
-  background-color: #ffe70e;
-  font-size: 16px;
-  font-weight: bold;
+.button:hover {
   color: #000;
-  display: inline-block;
-  padding: 5px 10px;
+  background-color: #fff;
+  border-top: 5px solid #000;
+  cursor: pointer;
+}
+
+article::after {
+  content: "SALE";
   position: absolute;
-  top: -10px;
-  right: -25px;
-}
-/* Resolving conflicts */
-/* IDs take precedence */
-/* #copyright {
-  color: red;
-}
-
-.copyright {
-  color: blue;
+  background-color: rgb(194, 19, 19);
+  padding: 10px 25px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  top: -20px;
+  left: -40px;
 }
 
-.text {
-  color: yellow;
+.block {
+  list-style: none;
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  margin: 25px 5px;
 }
 
-footer p {
-  color: green;
-} */
+.block:first-child {
+  margin-left: 0;
+}
 
-/* Use Simple Selectors */
+.black {
+  background-color: #000;
+}
 
-/* Inheritance */
+.blue {
+  background-color: blue;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: limegreen;
+}
+
+.brown {
+  background-color: brown;
+}
