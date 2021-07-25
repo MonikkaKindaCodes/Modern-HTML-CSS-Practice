@@ -99,6 +99,7 @@ article::after {
   color: #fff;
   top: -20px;
   left: -40px;
+  letter-spacing: 5px;
 }
 
 .block {
