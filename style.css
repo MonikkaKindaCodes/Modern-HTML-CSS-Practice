@@ -15,10 +15,12 @@ article {
 li {
   margin-bottom: 15px;
 }
+
 .container {
   width: 825px;
-  margin: 30px auto;
+  margin: 50px auto;
 }
+
 .product-title,
 .product-details,
 .button,
@@ -51,18 +53,21 @@ li {
 .product-pitch {
   margin-bottom: 15px;
 }
+
 .more-product-info:link,
 .more-product-info:visited {
   color: #000;
 }
+
 .more-product-info:hover,
 .more-product-info:active {
   text-decoration: none;
 }
 
 .product-details {
-  margin-bottom: 15px;
+  margin: 25px 0;
 }
+
 .product-details-li {
   list-style-type: square;
   padding-left: 50px;
@@ -72,12 +77,13 @@ li {
   color: #fff;
   font-size: 22px;
   background-color: #000;
+  padding: 15px;
   width: 100%;
 }
 
 .button:hover {
   color: #000;
   background-color: #fff;
-  border: none;
+  border-top: 5px solid #000;
   cursor: pointer;
 }
