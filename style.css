@@ -1,7 +1,8 @@
-/*Global Reset*/
+/*Global Reset / Universal Setting*/
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /*Page Sections*/
@@ -13,7 +14,7 @@ body {
 }
 
 .container {
-  width: 800px;
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -51,8 +52,7 @@ aside {
   background-color: #f7f7f7;
   border-top: 5px solid #1098ab;
   border-bottom: 5px solid #1098ab;
-  padding: 50px 0;
-  width: 500px;
+  padding: 50px 40px;
   height: auto;
 }
 
@@ -90,6 +90,7 @@ h4 {
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 p {
@@ -132,6 +133,7 @@ li:last-child {
 
 .related-list {
   list-style: none;
+  margin-left: 0;
 }
 
 /* Pseudo classes */
@@ -244,4 +246,40 @@ footer p {
   float: left;
   margin-top: 10px;
   margin-left: 20px;
+}
+
+/* Clearing Floats */
+h1 {
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+/* Resolves issues when using floats */
+/* .clear {
+  clear: both;
+} */
+
+/* Clear fix hack */
+
+/* .clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
+} */
+
+article {
+  width: 825px;
+  float: left;
+}
+
+aside {
+  width: 300px;
+  float: right;
+}
+
+footer {
+  clear: both;
 }
