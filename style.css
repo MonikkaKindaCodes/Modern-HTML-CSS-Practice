@@ -1,142 +1,74 @@
-/*Global Reset / Universal Setting*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/*Page Sections*/
-
-body {
+h1,
+h2,
+h3,
+h4,
+p,
+li {
   font-family: sans-serif;
-  border-top: 10px solid #1098ab;
-  position: relative;
-}
-
-.container {
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.main-header {
-  background-color: #f7f7f7;
-  padding: 20px 40px;
-  margin-bottom: 60px;
-  height: 80px;
-}
-
-nav {
-  font-size: 18px;
-  text-align: center;
-}
-
-nav a:link {
-  margin-right: 30px;
-  margin-top: 10px;
-  display: inline-block;
-  /* background-color: orangered;
-  margin: 20px;
-  padding: 20px;
-  display: block; */
-}
-
-nav a:link:last-child {
-  margin-right: 0;
-}
-
-article {
-  margin-bottom: 60px;
-}
-
-aside {
-  background-color: #f7f7f7;
-  border-top: 5px solid #1098ab;
-  border-bottom: 5px solid #1098ab;
-  padding: 50px 40px;
-  height: auto;
-}
-
-.post-header {
-  margin-bottom: 40px;
-}
-
-li,
-p {
   color: #444;
 }
 
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
 h1 {
   font-size: 26px;
   text-transform: uppercase;
   font-style: italic;
-  color: #1098ab;
 }
 
 h2 {
   font-size: 40px;
-  margin-bottom: 30px;
-  color: #1098ab;
-  position: relative;
 }
 
 h3 {
   font-size: 30px;
-  margin-bottom: 20px;
-  margin-top: 40px;
-  color: #1098ab;
 }
 
 h4 {
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 30px;
 }
-
 p {
   font-size: 22px;
   line-height: 1.5;
-  margin-bottom: 15px;
-}
-
-ul,
-ol {
-  margin-left: 50px;
-  margin-bottom: 20px;
 }
 
 li {
   font-size: 20px;
-  margin-bottom: 10px;
 }
 
-li:last-child {
-  margin-bottom: 0px;
-}
-/* We cannot use an ids more than once. That functionality is only available with classes.*/
-#copyright {
-  font-size: 16px;
-}
-
-/*We utilize ids to prevent specific, long css calls i.e.(header div p strong)*/
+/* IDs are not reccomended in CSS */
 #author {
   font-style: italic;
   font-size: 18px;
 }
 
-/* In modern development. We typically only use classes. No ids are typically used.  */
+footer p {
+  font-size: 16px;
+}
 
 .related-author {
   font-size: 18px;
   font-weight: bold;
 }
 
-.related-list {
-  list-style: none;
-  margin-left: 0;
+.related {
+  list-style-type: none;
 }
 
-/* Pseudo classes */
+.main-header {
+  background-color: #f7f7f7;
+}
+
+.related-section {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+}
 
 li:first-child {
   font-weight: bold;
@@ -146,140 +78,11 @@ li:last-child {
   font-style: italic;
 }
 
-/* Misconception: This will not work */
-article p:first-child {
+li:nth-child(even) {
+  /* color: red; */
+}
+
+/* The follwing property will only work if the p tag is the first descendant of the article tag.  */
+article p:last-child {
   color: red;
-}
-
-/* Styling Links */
-/* a element with href */
-a:link {
-  color: #1098ab;
-  text-decoration: none;
-}
-
-a:visited {
-  color: #1098ab;
-}
-
-a:hover {
-  color: orangered;
-  font-weight: bold;
-  text-decoration: underline orangered;
-}
-
-a:active {
-  background-color: rgb(0, 0, 0);
-  font-style: italic;
-}
-/* LVHA */
-
-.post-img {
-  width: 100%;
-  height: auto;
-}
-
-.like-btn {
-  font-size: 22px;
-  padding: 20px;
-  cursor: pointer;
-  /* top: 50px;
-  right: 50px; */
-  position: absolute;
-  bottom: 50px;
-  right: 50px;
-}
-
-/*Pseudo Elements are written with 2 colons :: */
-
-h1::first-letter {
-  font-style: normal;
-  margin-right: 5px;
-}
-
-/*Adajacent Sobling Selector*/
-/* h3 + p::first-line {
-  color: red;
-} */
-
-h2::after {
-  content: "TOP";
-  background-color: #ffe70e;
-  font-size: 16px;
-  font-weight: bold;
-  color: #000;
-  display: inline-block;
-  padding: 5px 10px;
-  position: absolute;
-  top: -10px;
-  right: -25px;
-}
-/* Resolving conflicts */
-/* IDs take precedence */
-/* #copyright {
-  color: red;
-}
-
-.copyright {
-  color: blue;
-}
-
-.text {
-  color: yellow;
-}
-
-footer p {
-  color: green;
-} */
-
-/* Use Simple Selectors */
-
-/* Inheritance */
-
-/* FLOATS */
-.author-img {
-  float: left;
-  margin-bottom: 20px;
-}
-
-.author {
-  float: left;
-  margin-top: 10px;
-  margin-left: 20px;
-}
-
-/* Clearing Floats */
-h1 {
-  float: left;
-}
-
-nav {
-  float: right;
-}
-
-/* Resolves issues when using floats */
-/* .clear {
-  clear: both;
-} */
-
-/* Clear fix hack */
-
-/* .clearfix::after {
-  clear: both;
-  content: "";
-  display: block;
-} */
-
-article {
-  width: 825px;
-  float: left;
-}
-
-aside {
-  width: 300px;
-  float: right;
-}
-
-footer {
-  clear: both;
 }
