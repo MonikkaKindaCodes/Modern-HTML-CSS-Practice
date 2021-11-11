@@ -55,3 +55,9 @@ article {
   font-size: 18px;
   height: 25px;
 }
+
+.shoe-cart:hover {
+  background-color: #fff;
+  color: #000;
+  border: none;
+}
