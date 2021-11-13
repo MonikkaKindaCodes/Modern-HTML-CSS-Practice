@@ -1,5 +1,8 @@
 * {
+  /* Global Reset - First thing to do when starting a new project. Lowest priority*/
   /* box-sizing: border-box; */
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -8,11 +11,43 @@ body {
   border-top: 10px solid #1098ad;
 }
 
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+nav {
+  font-size: 18px;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+  margin-bottom: 60px;
+  height: 80px;
+}
+
+.post-header {
+  margin-bottom: 40px;
+}
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  padding: 50px 0;
+  width: 500px;
+}
+
 h1,
 h2,
 h3 {
   color: #1098ad;
 }
+
 h1 {
   font-size: 26px;
   text-transform: uppercase;
@@ -21,10 +56,13 @@ h1 {
 
 h2 {
   font-size: 40px;
+  margin-bottom: 30px;
 }
 
 h3 {
   font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
 }
 
 h4 {
@@ -35,10 +73,23 @@ h4 {
 p {
   font-size: 22px;
   line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+ol,
+ul {
+  margin-left: 50px;
+  margin-bottom: 20px;
 }
 
 li {
   font-size: 20px;
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  /* Don't use units when adding 0 in CSS */
+  margin-bottom: 0;
 }
 
 /* IDs are not reccomended in CSS */
@@ -58,16 +109,6 @@ footer p {
 
 .related {
   list-style-type: none;
-}
-
-.main-header {
-  background-color: #f7f7f7;
-}
-
-aside {
-  background-color: #f7f7f7;
-  border-top: 5px solid #1098ad;
-  border-bottom: 5px solid #1098ad;
 }
 
 /* The follwing property will only work if the p tag is the first descendant of the article tag.  */
@@ -95,4 +136,10 @@ a:hover {
 a:active {
   background-color: black;
   font-style: italic;
+}
+
+.post-img {
+  /* width is determined by the parent container */
+  width: 100%;
+  height: auto;
 }
